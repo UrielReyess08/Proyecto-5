@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos.css">
+    <title>Monta tu Pc</title>
+</head>
+<body>
+
+    <ul class="menu-ul">
+        <li class="menu-li"><a class="active" href="/index.html">INICIO</a></li>
+        <li class="menu-li"><a href="">EQUIPOS</a></li>
+        <li class="menu-li"><a href="">CONTACTO</a></li>
+    </ul>
+
+    <h1>Arma la mejor PC gamer aqui</h1>
+    <p>Aqui donde somos especialistas brindandote los mejores compenentes a un buen precio y con garantia.</p>
+    <h1>Selecciona los componentes:</h1>
+    <!-- Primer dropdown list de productos -->
+    <label for="producto1">PROCESADOR*</label><br>
+    <select id="producto1" name="producto1">
+        <option value="0">Selecciona una opción</option>
+        <option value="10">PROCESADOR AMD 754 SEMPRON 3000+ 1.8GHZ/256KB TRAY ($10)</option>
+        <option value="20">Cpu Intel Lga1200 Pentium Dual Core G5905 3.50ghz Chip Celeron G5905 3.50ghz ($20)</option>
+        <option value="30">Cpu Intel Lga1200 Celeron G5900 Tray 2x3,4 58w Bulk ($30)</option>
+    </select>
+    <br>
+    <!-- Segundo dropdown list de productos -->
+    <label for="producto2">PLACA BASE*</label><br>
+    <select id="producto2" name="producto2">
+        <option value="0">Selecciona una opción</option>
+        <option value="10">Asus Prime B550M-K Socket AM4 - Placa Base ($10)</option>
+        <option value="20">PLACA BASE ASUS AM4 PRIME B550-PLUS ($20)</option>
+        <option value="30">PLACA BASE ASUS AM4 PRIME B550M-A WI-FI II ($30)</option>
+    </select>
+    <br>
+
+    <label for="producto3">TARJETA GRAFICA*</label><br>
+    <select id="producto3" name="producto3">
+        <option value="0">Selecciona una opción</option>
+        <option value="10">TARJETA GR&Aacute;FICA MSI GT N730K 2GB GDDR3 OC ($10)</option>
+        <option value="20">TARJETA GR&Aacute;FICA MSI GT 730 LOW PROFILE 2GB GDDR3 V1 ($20)</option>
+        <option value="30">TARJETA GR&Aacute;FICA GIGABYTE GT 730 2GB GDDR3 ($30)</option>
+    </select>
+    <br>
+
+    <label for="producto4">MEMORIA RAM*</label><br>
+    <select id="producto4" name="producto4">
+        <option value="0">Selecciona una opción</option>
+        <option value="10">Memoria Gskill Ddr4 4gb Pc2400 Nt ($10)</option>
+        <option value="20">Memoria Gskill Ddr4 4gb Pc2133 Nt ($20)</option>
+        <option value="30">MODULO MEMORIA RAM DDR4 4GB PC2400 GOODRAM RETAIL ($30)</option>
+    </select>
+    <br>
+
+    <label for="producto5">DISCO DURO*</label><br>
+    <select id="producto5" name="producto5">
+        <option value="0">Selecciona una opción</option>
+        <option value="10">Hd Ssd Intenso 120 Gb High Performance Lec 520mb / Esc 500 6gbit ($10)</option>
+        <option value="20">Ssd Innovation It 00-120929 2.5&quot; 120 Gb Sata Tlc ($20)</option>
+        <option value="30">Hd Ssd Intenso 128gb 2.5\1 Top Performance ($30)</option>
+    </select>
+    <br>
+
+    <label for="producto6">GABINETE*</label><br>
+    <select id="producto6" name="producto6">
+        <option value="0">Selecciona una opción</option>
+        <option value="10">Caja Pc Chieftec Mini-itx Ix-03b-op (b) Sin Fuente ($10)</option>
+        <option value="20">Tempest Spectra Rgb Usb 3.0 Con Ventana Blanco ($20)</option>
+        <option value="30">TORRE ATX NOX PAX USB 3.0 NEGRO / AZUL ($30)</option>
+    </select>
+    <br>    
+
+    <label for="producto7">VENTILADOR CPU*</label><br>
+    <select id="producto7" name="producto7">
+        <option value="0">Selecciona una opción</option>
+        <option value="10">VEN CPU DEEPCOOL GAMMA ARCHER VEN 120MM/ALTURA 65.5MM/MULTI ($10)</option>
+        <option value="20">DISIPADOR I3/I5/775/1150/1151/2011/FM1/FM2 L-LINK ($20)</option>
+        <option value="30">DISIPADOR NOX HUMMER H-112 ($30)</option>
+    </select>
+    <br>
+
+    <label for="total">Total:</label>
+    <input type="text" id="total" name="total" value="$0" readonly>
+
+    <footer>
+        <div class="superior">
+        <div class="seguir">
+        <h2>siguenos en nuestras redes:</h2>
+        </div>
+        </div>
+        <div>
+            <a target="_blank" href="https://www.facebook.com/login/?next=%2Fmarketplace%2F"><img src="/img/facebook.png" class="img-app" alt=""></a>
+            <a target="_blank" href="https://www.instagram.com/"><img src="/img/ig.png" class="img-app" alt=""></a>
+            <a target="_blank" href="https://web.telegram.org/k/"><img src="/img/telegram.png" class="img-app" alt=""></a>
+        </div>
+    </footer>
+
+<script>
+    // Obtener los elementos select y input
+        const producto1 = document.getElementById('producto1');
+        const producto2 = document.getElementById('producto2');
+        const producto3 = document.getElementById('producto3');
+        const producto4 = document.getElementById('producto4');
+        const producto5 = document.getElementById('producto5');
+        const producto6 = document.getElementById('producto6');
+        const producto7 = document.getElementById('producto7');
+        const total = document.getElementById('total');
+
+        // Agregar un evento change a cada uno de los elementos select
+        producto1.addEventListener('change', calcularTotal);
+        producto2.addEventListener('change', calcularTotal);
+        producto3.addEventListener('change', calcularTotal);
+        producto4.addEventListener('change', calcularTotal);
+        producto5.addEventListener('change', calcularTotal);
+        producto6.addEventListener('change', calcularTotal);
+        producto7.addEventListener('change', calcularTotal);
+
+        // Función para calcular el total
+        function calcularTotal() {
+        const precio1 = parseInt(producto1.value);
+        const precio2 = parseInt(producto2.value);
+        const precio3 = parseInt(producto3.value);
+        const precio4 = parseInt(producto4.value);
+        const precio5 = parseInt(producto5.value);
+        const precio6 = parseInt(producto6.value);
+        const precio7 = parseInt(producto7.value);
+        const suma = precio1 + precio2 + precio3 + precio4 + precio5 + precio6 + precio7;
+
+        // Actualizar el valor del elemento input
+        total.value = `$${suma}`;
+        }
+
+
+</script>
+</body>
+</html>

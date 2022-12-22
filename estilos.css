@@ -1,0 +1,77 @@
+*{
+    margin: 5px;
+    padding: 5px;
+}
+
+.menu-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #515759;
+}
+  
+.menu-li {
+    float: left;
+}
+  
+.menu-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.menu-li a:hover {
+    background-color: #69868C;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+p{
+    color: black;
+    font-size: xx-large;
+}
+
+h1{
+    color: black;
+}
+
+select{
+    width: 515px;
+    height: 45px;
+    padding: 10px;
+}
+
+input, select{
+    border: solid 2px;
+    border-color: black;
+    font-size: 15px;
+}
+
+footer{
+    color: white;
+    font-size: larger;
+    background-color: #515759;
+}
+
+.superior{
+    width: 100%;
+}
+
+.seguir{
+    width: 100%;
+}
+
+.sigueme > h2{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.img-app{
+    width: 2.5rem;
+    height: 2.5rem;
+}
